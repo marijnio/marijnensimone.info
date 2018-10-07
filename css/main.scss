@@ -97,9 +97,9 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-family: _font(family-alt);
 		// font-weight: _font(weight-extrabold);
-		letter-spacing: _size(letter-spacing);
+		font-family: _font(family);
+		letter-spacing: 0;
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 		// text-transform: uppercase;
@@ -110,7 +110,13 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+	h1 {
+		font-family: _font(family-alt);
+		font-size: 1.4em;
+	}
+
 	h2 {
+		font-family: _font(family-alt);
 		font-size: 3em;
 		line-height: 1.1em;
 
@@ -121,7 +127,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	h3 {
-		font-size: 1.15em;
+		font-size: 1.8em;
 		line-height: 1.75em;
 
 		@include breakpoint(small) {
@@ -131,7 +137,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: 1.3em;
 		line-height: 1.5em;
 	}
 
@@ -1388,12 +1394,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
-		display: none;
 
 		h1 {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
 			height: inherit;
-			left: 1.25em;
+			left: 1em;
 			line-height: inherit;
 			position: absolute;
 			top: 0;
@@ -1416,6 +1421,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			position: absolute;
 			right: 0;
 			top: 0;
+			display: none;
 
 			> ul {
 				list-style: none;
@@ -1816,6 +1822,10 @@ $baseurl: '{{ site.baseurl }}/images';
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding-top: 0;
+		}
+
+		#header {
+			display: none;
 		}
 
 		#footer {
