@@ -34,10 +34,37 @@ layout: landing
 								<p>Simone is dol op katten, Marijn op computers. Toch zijn ze in overeenstemming dat ze het meeste hebben aan elkaar. Daar komt binnenkort een strik omheen!</p>
 							</div>
 						</section>
+						<section class="spotlight">
+							<div class="image">
+								<!--The div element for the map -->
+								<div id="map"></div>
+								<script>
+								// Initialize and add the map
+								function initMap() {
+								// The location of the venue
+								var venue = {lat: 51.641477, lng: 4.808186};
+								// The map, centered at the venue
+								var map = new google.maps.Map(
+									document.getElementById('map'), {zoom: 17, center: venue});
+								// The marker, positioned at the venue
+								var marker = new google.maps.Marker({position: venue, map: map});
+								}
+								</script>
+								<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC72_r2aTsuarc3AHwabwKmtwiUUFhug_M&callback=initMap">
+								</script>
+							</div>
+							<div class="content">
+								<h2>Paviljoen<br />
+								Het Houtse Meer</h2>
+								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<p><a href="https://www.hethoutsemeer.nl/">hethoutsemeer.nl</a></p>
+							</div>
+						</section>
 					</section>
 
 				<!-- Three -->
-					<!-- <section id="three" class="wrapper style3 special">
+					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
 								<h2>Accumsan mus tortor nunc aliquet</h2>
@@ -63,7 +90,7 @@ layout: landing
 								</li>
 							</ul>
 						</div>
-					</section> -->
+					</section>
 
 				<!-- CTA -->
 					<!-- <section id="cta" class="wrapper style2">
