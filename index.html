@@ -8,7 +8,7 @@ layout: landing
 							<!-- <p>{{ site.description | markdownify }}</p> -->
 							<p>18 juli 2019</p>
 							<ul class="actions">
-								<li><a href="#cta" class="button">RSVP</a></li>
+								<li><a href="#rsvp" class="button">RSVP</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Verder</a>
@@ -93,41 +93,40 @@ layout: landing
 					</section>
 
 				<!-- CTA -->
-					<section id="cta" class="wrapper style2">
+					<section id="rsvp" class="wrapper style2">
 						<div class="inner">
 							<header class="major">
-								<h2>Ben jij erbij?</h2>
-								<form method="post" action="#">
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Ja</label>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Nee</label>
-									</div>
-									<p>Geef het door voor 18 juni</p>
-									<div class="row uniform">
-										<div class="12u$">
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Namen op de trouwkaart" />
-										</div>
-										<div class="12u$">
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-										</div>
-										<div class="12u$">
-											<textarea name="demo-message" id="demo-message" placeholder="Vragen of opmerkingen" rows="6" style="resize: none;"></textarea>
-										</div>
-										<div class="6u$ 12u$(small)">
-											<input type="checkbox" id="demo-human" name="demo-human">
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="12u$">
-											<ul class="actions">
-												<li><input type="submit" value="Verzenden" class="special" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
+								<h2>RSVP</h2>
+								<p><i>Geef het door voor 10 juni</i></p>
 							</header>
+						</div>
+						<div class="inner">
+							<form action="https://formspree.io/willemse.marijn@gmail.com" method="post" action="#">
+								<p>Ben je erbij?</p>
+								<div class="6u$ 12u$(small)">
+									<input type="radio" id="demo-priority-low" name="attendance" value="present" checked>
+									<label for="demo-priority-low">Ja</label>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<input type="radio" id="demo-priority-normal" name="attendance" value="not-present">
+									<label for="demo-priority-normal">Nee</label>
+								</div>
+								<div class="row uniform">
+									<div class="8u$ 12u$">
+										<input type="text" name="names" value="" placeholder="Namen op de trouwkaart" />
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="email" name="email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="comments" placeholder="Vragen of opmerkingen" rows="6" style="resize: none;"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Verzenden" class="special" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
 						</div>
 					</section>
