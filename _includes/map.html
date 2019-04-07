@@ -1,0 +1,19 @@
+<div class="image">
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <script>
+  // Initialize and add the map
+  function initMap() {
+  // The location of the venue
+  var venue = {lat: 51.641477, lng: 4.808186};
+  // The map, centered at the venue
+  var map = new google.maps.Map(
+    document.getElementById('map'), {zoom: 17, center: venue});
+  // The marker, positioned at the venue
+  var marker = new google.maps.Marker({position: venue, map: map});
+  }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC72_r2aTsuarc3AHwabwKmtwiUUFhug_M&callback=initMap">
+  </script>
+</div>
