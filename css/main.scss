@@ -1882,19 +1882,29 @@ $baseurl: '{{ site.baseurl }}/images';
 		top: 0;
 		right: 0;
 		background-image: url("#{$baseurl}/flower-red.jpg");
-		background-position: top -330px right -270px;
+    background-position: top -220px right -210px;
 	}
 
 	&::after {
 		bottom: 0;
 		left: 0;
 		background-image: url("#{$baseurl}/flower-blue.jpg");
-		background-position: bottom -370px left -240px;
+		background-position: bottom -280px left -160px;
+	}
+
+	@include breakpoint(large) {
+		&::before {
+			background-position: top -330px right -270px;
+		}
+
+		&::after {
+			background-position: bottom -370px left -240px;
+		}
 	}
 
 	@include breakpoint(medium) {
 		&::before {
-			background-position: top -350px right -390px;
+			background-position: top -350px right -320px;
 		}
 
 		&::after {
@@ -1903,12 +1913,15 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	@include breakpoint(small) {
+    padding-top: 9em;
+		padding-bottom: 12em;
+
 		&::before {
-			background-position: top -470px right -340px;
+			background-position: top -360px right -280px;
 		}
 
 		&::after {
-			background-position: bottom -440px left -310px;
+			background-position: bottom -430px left -240px;
 		}
 	}
 }
