@@ -1892,9 +1892,9 @@ $baseurl: '{{ site.baseurl }}/images';
 		background-position: bottom -280px left -160px;
 	}
 
-	@include breakpoint(large) {
+	@include breakpoint(xlarge) {
 		&::before {
-			background-position: top -330px right -270px;
+			background-position: top -280px right -250px;
 		}
 
 		&::after {
