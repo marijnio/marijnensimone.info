@@ -915,7 +915,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				$j: 0.035 * $i;
 
 				&:nth-child(#{$i}) {
-					background-color: rgba(0,0,0, $j);
+					background-color: rgba(34,37,43, $j);
 				}
 			}
 
@@ -1852,3 +1852,76 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
+/* Google Maps */
+
+#map {
+	height: 22em;
+	width: 100%;
+ }
+
+/* FLower */
+
+.flower {
+	position: relative;
+
+	> .inner {
+		position: relative;
+		z-index: 1;
+	}
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	&::before {
+		top: 0;
+		right: 0;
+		background-image: url("#{$baseurl}/flower-red.jpg");
+    background-position: top -220px right -210px;
+	}
+
+	&::after {
+		bottom: 0;
+		left: 0;
+		background-image: url("#{$baseurl}/flower-blue.jpg");
+		background-position: bottom -280px left -160px;
+	}
+
+	@include breakpoint(xlarge) {
+		&::before {
+			background-position: top -280px right -250px;
+		}
+
+		&::after {
+			background-position: bottom -370px left -240px;
+		}
+	}
+
+	@include breakpoint(medium) {
+		&::before {
+			background-position: top -350px right -320px;
+		}
+
+		&::after {
+			background-position: bottom -390px left -270px;
+		}
+	}
+
+	@include breakpoint(small) {
+    padding-top: 9em;
+		padding-bottom: 12em;
+
+		&::before {
+			background-position: top -360px right -280px;
+		}
+
+		&::after {
+			background-position: bottom -430px left -240px;
+		}
+	}
+}
